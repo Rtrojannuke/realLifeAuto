@@ -21,7 +21,7 @@ public class SignUp {
 		
 		driver.get("https://netowsolutions.com/swadel/");
 		
-		driver.findElement(By.className("fa czico-100-user-1")).click();
+		driver.findElement(By.cssSelector("#layout > div > header > div.header_1.cz_menu_fx_fade_in > div > div > div.elms_right.header_1_right > div.cz_elm.icon_header_1_right_4.inner_icon_header_1_right_2 > a > i")).click();
 	}
 	
 	@Test
@@ -39,13 +39,13 @@ public class SignUp {
 	@Test
 	public void validEmail() {
 		driver.findElement(By.id("reg_email")).clear();
-		driver.findElement(By.id("reg_email")).sendKeys("muba@yop");
+		driver.findElement(By.id("reg_email")).sendKeys("muba@yopmail.com");
 		driver.findElement(By.name("register")).click();
 	}
 	
 	@AfterTest
 	public void afterExecution() {
-		
+		driver.quit();
 	}
 	
 
